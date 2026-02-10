@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Quince Años - Hellem Sophia</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Botón para volver arriba -->
+    <div class="btn-top" id="btnTop">
+      <i class="bi bi-chevron-up"></i>
+    </div>
+
+    <!-- Hojas cayendo -->
+    <div class="hojas-container"></div>
+
+    <!-- Navegación entre secciones -->
+    <div class="nav-secciones d-none d-lg-block">
+      <span class="nav-dot active" data-target="portada"></span>
+      <span class="nav-dot" data-target="cuenta-regresiva"></span>
+      <span class="nav-dot" data-target="informacion"></span>
+      <span class="nav-dot" data-target="dress-code"></span>
+      <span class="nav-dot" data-target="confirmacion"></span>
+    </div>
+
+    <!-- Portada -->
+    <section id="portada">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h1 class="titulo-principal">Hellem Sophia</h1>
+            <div class="fecha-fiesta">11 de Abril, 2026</div>
+            <h2 class="subtitulo">Mis Quince Años</h2>
+            <p class="mensaje-invitacion">
+              Había una vez una princesa que soñaba con una noche llena de magia,
+              sonrisas y personas especiales. Hoy ese sueño se hace realidad al
+              celebrar mis quince años. Tu presencia será parte esencial de este
+              cuento que guardaré por siempre en mi corazón. Te espero para vivir
+              juntos una noche inolvidable.
+            </p>
+            <a
+              href="#confirmacion"
+              class="btn btn-lg btn-outline-light"
+              style="
+                border-radius: 30px;
+                padding: 12px 35px;
+                animation: fadeIn 2s ease-out 1.2s both;
+              "
+              >Confirmar Asistencia</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Flecha indicadora -->
+      <div
+        class="position-absolute bottom-0 start-50 translate-middle-x mb-5"
+        style="animation: bounce 2s infinite 2s"
+      >
+        <i class="bi bi-chevron-down text-white" style="font-size: 2.5rem"></i>
+      </div>
+    </section>
+
+    <!-- Cuenta Regresiva -->
+    <section id="cuenta-regresiva">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="mb-4" style="font-size: 3rem; color: var(--rosa-principal)">
+              La cuenta regresiva ha comenzado
+            </h2>
+            <p class="lead mb-5">
+              Faltan pocos días para celebrar juntos este momento inolvidable
+            </p>
+
+            <div class="contador">
+              <div class="contador-item">
+                <span id="dias" class="contador-numero">00</span>
+                <span class="contador-texto">Días</span>
+              </div>
+              <div class="contador-item">
+                <span id="horas" class="contador-numero">00</span>
+                <span class="contador-texto">Horas</span>
+              </div>
+              <div class="contador-item">
+                <span id="minutos" class="contador-numero">00</span>
+                <span class="contador-texto">Minutos</span>
+              </div>
+              <div class="contador-item">
+                <span id="segundos" class="contador-numero">00</span>
+                <span class="contador-texto">Segundos</span>
+              </div>
+            </div>
+
+            <div class="corazon-container">
+              <h3 class="mb-4" style="color: var(--rosa-principal)">
+                Mi corazón palpita de emoción
+              </h3>
+              <div class="corazon">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="princesa-contador">
+        <img src="./images/princesa.png" alt="princesa" />
+      </div>
+    </section>
+
+    <!-- Información de la Fiesta -->
+    <section id="informacion">
+      <div class="container">
+        <div class="row justify-content-center mt-5 mb-5">
+          <div class="col-12 text-center">
+            <h2 style="font-size: 3rem; color: var(--rosa-principal)">
+              Información de la Fiesta
+            </h2>
+            <p class="lead">
+              Todos los detalles para que no te pierdas nada de esta celebración
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <i class="bi bi-calendar-event"></i>
+              </div>
+              <h3 class="text-center mb-3">Fecha</h3>
+              <p class="text-center"><strong>11 de Abril, 2026</strong></p>
+              <p class="text-center">La celebración comenzará a las 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h3 class="text-center mb-3">Lugar</h3>
+              <p class="text-center">
+                <strong>Salón de eventos "Saraluz"</strong>
+              </p>
+              <p class="text-center">Un lugar mágico para una noche inolvidable</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <i class="bi bi-signpost"></i>
+              </div>
+              <h3 class="text-center mb-3">Dirección</h3>
+              <p class="text-center"><strong>Avenida Roosevelt # 38-49</strong></p>
+              <p class="text-center">Segundo y tercer piso, Cali</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <i class="bi bi-clock"></i>
+              </div>
+              <h3 class="text-center mb-3">Horario</h3>
+              <p class="text-center"><strong>8:00 PM - 3:00 AM</strong></p>
+              <p class="text-center">
+                ¡Prepárate para una noche llena de sorpresas!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5 mb-5">
+          <div class="col-12">
+            <h3
+              class="text-center mb-4"
+              style="font-size: 3rem; color: var(--rosa-principal)"
+            >
+              Cómo llegar
+            </h3>
+            <div class="mapa-container">
+              <!-- Mapa simulado con una imagen decorativa -->
+              <div
+                style="
+                  width: 100%;
+                  height: 400px;
+                  background-color: #e0e0e0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 15px;
+                "
+              >
+                <div class="text-center">
+                  <i
+                    class="bi bi-map"
+                    style="
+                      font-size: 4rem;
+                      color: var(--rosa-principal);
+                      margin-bottom: 1rem;
+                    "
+                  ></i>
+                  <h4>Mapa de ubicación</h4>
+                  <p>Salón de eventos "Saraluz" - Avenida Roosevelt # 38-49</p>
+                  <a
+                    href="https://maps.app.goo.gl/B4Unvt3WGmhUH4ag8"
+                    target="_blank"
+                    class="btn btn-sm"
+                    style="
+                      background-color: var(--rosa-principal);
+                      color: white;
+                      border-radius: 20px;
+                      padding: 8px 20px;
+                    "
+                    >Abrir en Google Maps</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section id="dress-code">
+      <div class="container">
+        <div class="row justify-content-center mb-5 mt-5">
+          <div class="col-12 text-center">
+            <h2 style="font-size: 3rem; color: var(--rosa-principal)">Dress Code</h2>
+            <p class="lead">Indicaciones de vestuario para la celebración</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <img
+                  style="width: 100px"
+                  src="./images/vestido-de-novia.png"
+                  alt="Traje Hombre"
+                />
+              </div>
+              <h3 class="text-center mb-3" style="font-size: 3rem">
+                <strong>Ellas Divinas</strong>
+              </h3>
+              <p class="dress-subtitle">Belleza y elegancia para damas</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="info-card">
+              <div class="info-icon text-center">
+                <img
+                  style="width: 100px"
+                  src="./images/traje.png"
+                  alt="Traje Hombre"
+                />
+              </div>
+              <h3 class="text-center mb-3" style="font-size: 3rem">
+                <strong>Ellos Guapos</strong>
+              </h3>
+              <p class="dress-subtitle">Elegancia y estilo para caballeros</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 mb-5">
+          <div class="col-12">
+            <div class="color-reservado">
+              <h4 class="mb-0">
+                <i class="bi bi-info-circle me-2"></i> Importante: El color verde
+                está reservado exclusivamente para la quinceañera
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confirmación de Asistencia -->
+    <section id="confirmacion">
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="formulario-confirmacion">
+              <h2
+                class="text-center mb-4"
+                style="font-size: 2.5rem; color: var(--rosa-principal)"
+              >
+                Confirma tu asistencia
+              </h2>
+              <p class="text-center mb-4">
+                Por favor, confirma tu participación antes del 30 de Noviembre para
+                poder planificar mejor este día tan especial.
+              </p>
+
+              <form id="formConfirmacion">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre"
+                        placeholder="Nombre completo"
+                        required
+                        style="border-radius: 10px"
+                      />
+                      <label for="nombre">Nombre completo *</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Correo electrónico"
+                        required
+                        style="border-radius: 10px"
+                      />
+                      <label for="email">Correo electrónico *</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telefono"
+                        placeholder="Teléfono"
+                        style="border-radius: 10px"
+                      />
+                      <label for="telefono">Teléfono</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <select
+                        class="form-select"
+                        id="asistentes"
+                        required
+                        style="border-radius: 10px"
+                      >
+                        <option value="" selected disabled>Selecciona...</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas o más</option>
+                      </select>
+                      <label for="asistentes">Número de asistentes *</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        id="mensaje"
+                        placeholder="Mensaje o comentarios"
+                        style="height: 120px; border-radius: 10px"
+                      ></textarea>
+                      <label for="mensaje">Mensaje o comentarios (opcional)</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn-enviar">
+                      <i class="bi bi-check-circle me-2"></i> Confirmar Asistencia
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div
+                id="mensaje-confirmacion"
+                class="alert alert-success mt-4 text-center d-none"
+                style="border-radius: 10px"
+              >
+                <i class="bi bi-check-circle-fill me-2"></i> ¡Gracias por confirmar
+                tu asistencia! Te esperamos en mi celebración.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <p class="footer-mensaje">¡Los esperamos con todo el corazón!</p>
+            <p>Con cariño, Hellem Sophia y familia</p>
+            <p class="mt-3">
+              <small>© 2023 - Mis Quince Años - Hellem Sophia</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botón de música -->
+    <audio id="musicaFondo" loop autoplay>
+      <source src="./music/musica.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="btnMusica" class="btn-musica">
+      <i class="bi bi-play-fill"></i>
+    </button>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
