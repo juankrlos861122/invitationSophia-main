@@ -331,7 +331,7 @@ section {
 }
 
 .color-reservado {
-  background: linear-gradient(135deg, var(--verde-quinceanera), #1b5e20);
+  background: linear-gradient(135deg, #3f523a, #3f523a);
   color: white;
   padding: 1.5rem;
   border-radius: 15px;

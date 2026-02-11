@@ -117,25 +117,38 @@ document.addEventListener("DOMContentLoaded", function () {
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Validación simple
-    const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
-    const asistentes = document.getElementById("asistentes").value;
+    const formData = new FormData(formulario);
+    const action =
+      "https://script.google.com/macros/s/AKfycbyRDz31s_in0sbux1qJzqHlPGupzms6Zn5nlrU2DRhx1yDVfYHbC774-ZhLGFXNFxmnfQ/exec";
 
-    if (nombre && email && asistentes) {
-      // Simular envío de formulario
-      setTimeout(function () {
-        formulario.reset();
+    fetch(action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result === "success") {
+          mensajeConfirmacion.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i> ${data.message}`;
+          mensajeConfirmacion.classList.remove("alert-danger");
+          mensajeConfirmacion.classList.add("alert-success");
+          mensajeConfirmacion.classList.remove("d-none");
+          formulario.reset();
+        } else {
+          mensajeConfirmacion.innerHTML = `<i class="bi bi-exclamation-triangle-fill me-2"></i> ${data.message}`;
+          mensajeConfirmacion.classList.remove("alert-success");
+          mensajeConfirmacion.classList.add("alert-danger");
+          mensajeConfirmacion.classList.remove("d-none");
+        }
+
+        // Ocultar después de 6 segundos
+        setTimeout(() => mensajeConfirmacion.classList.add("d-none"), 6000);
+      })
+      .catch((error) => {
+        mensajeConfirmacion.innerHTML = `<i class="bi bi-exclamation-triangle-fill me-2"></i> Error de conexión. Intenta de nuevo.`;
+        mensajeConfirmacion.classList.remove("alert-success");
+        mensajeConfirmacion.classList.add("alert-danger");
         mensajeConfirmacion.classList.remove("d-none");
-
-        // Ocultar mensaje después de 5 segundos
-        setTimeout(function () {
-          mensajeConfirmacion.classList.add("d-none");
-        }, 5000);
-      }, 1000);
-    } else {
-      alert("Por favor, completa todos los campos obligatorios (*)");
-    }
+      });
   });
 
   // Efecto de palpitar más rápido al hacer clic en el corazón
